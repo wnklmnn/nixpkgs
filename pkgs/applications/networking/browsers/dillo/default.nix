@@ -3,7 +3,7 @@
 , openssl
 , libjpeg, libpng
 , perl
-, libXcursor, libXi, libXinerama }:
+, libXcursor, libXi, libXinerama, which,automake111x, autoconf }:
 
 stdenv.mkDerivation rec {
   version = "3.0.5";
@@ -15,8 +15,8 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = with stdenv.lib;
-  [ perl fltk openssl libjpeg libpng libXcursor libXi libXinerama ];
-
+  [ which perl fltk openssl libjpeg libpng libXcursor libXi libXinerama automake111x autoconf ];
+  patches = [ ./fix-OpenSSL-1.1-detection.patch];
   configureFlags = [ "--enable-ssl" ];
 
   meta = with stdenv.lib; {
