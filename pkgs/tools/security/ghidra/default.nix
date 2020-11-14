@@ -19,8 +19,8 @@ in stdenv.mkDerivation {
   name = "ghidra-9.1.2";
 
   src = fetchzip {
-    url = "https://ghidra-sre.org/ghidra_9.1.2_PUBLIC_20200212.zip";
-    sha256 = "0j48pijypg44bw06azbrgfqjkigb13ljfdxib70sxwyqia3vkbbm";
+    url = "https://ghidra-sre.org/ghidra_9.2_PUBLIC_20201113.zip";
+    sha256 = "0lcvmbq04qkdsf0bz509frgw79bhyxyixkqg1k712p3576ng3nby";
   };
 
   nativeBuildInputs = [
