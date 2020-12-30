@@ -1,0 +1,11 @@
+--- linux/Makefile	1970-01-01 01:00:01.000000000 +0100
++++ linux/Makefile	2021-01-05 00:12:31.054669669 +0100
+@@ -18,7 +18,7 @@
+ LIBS  =  -lspeex -lasound -lpthread -lm
+ JPEG  = -I$(JPEG_INCLUDE) $(JPEG_LIB)/libturbojpeg.a
+ SRC      = src/connection.c src/settings.c src/decoder*.c src/av.c src/usb.c
+-USBMUXD = -lusbmuxd
++USBMUXD = -lusbmuxd-2.0
+ 
+ all: droidcam-cli droidcam
+ 

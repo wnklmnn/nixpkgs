@@ -3495,6 +3495,8 @@ in
     inherit (darwin.apple_sdk.frameworks) Security;
   };
 
+  droidcam = callPackage ../tools/misc/droidcam { };
+
   drone = callPackage ../development/tools/continuous-integration/drone { };
 
   drone-cli = callPackage ../development/tools/continuous-integration/drone-cli { };
